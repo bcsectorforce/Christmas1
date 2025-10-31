@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🎄 Merry Christmas Countdown 🎅</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@700&display=swap');
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Mountains of Christmas', cursive;
+      overflow-x: hidden;
+      background: linear-gradient(180deg, #0b132b, #1c2541, #3a506b);
+      color: white;
+    }
+
+    header {
+      text-align: center;
+      padding: 80px 20px;
+      background: radial-gradient(circle, #ff0000, #8b0000);
+      position: relative;
+      overflow: hidden;
+    }
+
+    header h1 {
+      font-size: 4em;
+      color: gold;
+      text-shadow: 0 0 20px #fff, 0 0 40px gold;
+      animation: glow 3s infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px gold; }
+      to { text-shadow: 0 0 40px white, 0 0 80px gold; }
+    }
+
+    #countdown {
+      font-size: 2em;
+      margin-top: 20px;
+    }
+
+    .snowflake {
+      position: fixed;
+      top: -10px;
+      z-index: 9999;
+      user-select: none;
+      pointer-events: none;
+      color: white;
+      font-size: 1em;
+      opacity: 0.9;
+      animation: fall linear infinite;
+    }
+
+    @keyframes fall {
+      to { transform: translateY(100vh) rotate(360deg); }
+    }
+
+    section {
+      padding: 100px 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    .video-section {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 60px 20px;
+      border-radius: 15px;
+      max-width: 900px;
+      margin: 0 auto;
+      box-shadow: 0 0 20px rgba(255,255,255,0.3);
+    }
+
+    .video-placeholder {
+      width: 100%;
+      height: 500px;
+      background: url('https://images.unsplash.com/photo-1608889178091-9bb4e63e78f5') center/cover no-repeat;
+      border-radius: 15px;
+      position: relative;
+    }
+
+    .video-placeholder::after {
+      content: "▶ Click to Play!";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(0,0,0,0.6);
+      color: white;
+      padding: 20px 40px;
+      border-radius: 10px;
+      font-size: 1.5em;
+      cursor: pointer;
+    }
+
+    footer {
+      background: #0b132b;
+      padding: 40px;
+      text-align: center;
+      color: #aaa;
+    }
+
+    /* Decorative Lights */
+    .lights {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      padding: 10px 0;
+      z-index: 10;
+    }
+
+    .light {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: red;
+      animation: blink 1.5s infinite alternate;
+    }
+
+    .light:nth-child(2n) { background: green; animation-delay: 0.5s; }
+    .light:nth-child(3n) { background: gold; animation-delay: 1s; }
+
+    @keyframes blink {
+      0% { opacity: 0.3; box-shadow: 0 0 5px white; }
+      100% { opacity: 1; box-shadow: 0 0 20px white; }
+    }
+
+    /* Parallax Background */
+    .parallax {
+      background: url('https://images.unsplash.com/photo-1577041244121-c5f75b7b83b4') center/cover fixed no-repeat;
+      height: 500px;
+    }
+
+    /* Smooth fade-in animation */
+    [data-animate] {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: 1s ease;
+    }
+
+    [data-animate].visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="lights">
+      <div class="light"></div>
+      <div class="light"></div>
+      <div class="light"></div>
+      <div class="light"></div>
+      <div class="light"></div>
+      <div class="light"></div>
+    </div>
+    <h1>🎅 Merry Christmas! 🎄</h1>
+    <div id="countdown">Loading countdown...</div>
+  </header>
+
+  <div class="parallax"></div>
+
+  <section data-animate>
+    <h2>Merry Christmas</h2>
+    <p>Spread joy, love, and kindness this Christmas season. May your days be merry and bright! Dont forget to read Michio Kaku's recent domcument on quantum gravity.
+  </p>
+  </section>
+
+  <section class="video-section" data-animate>
+    <div class="video-placeholder" id="videoPlaceholder"></div>
+  </section>
+
+  <section data-animate>
+    <h2>Make a Wish 🎁</h2>
+    <p>this website is a work in progress. it was made with sencerity from all the frogs and bellybuttons at the BC. and James Degenhardt. Special shout outs to Leslie, Pete, Saki, Angie, Moley, and bob.</p>
+  </section>
+
+  <footer>
+    <p>Made with ❤️ and hot cocoa © 2025</p>
+  </footer>
+<a href="https://tictactoe-5u4.pages.dev" target="_blank" style="
+  background: red;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-family: 'Mountains of Christmas', cursive;
+  font-size: 1.2em;
+  transition: 0.3s;
+">
+🎅 Visit tictactoe-5u4
+</a>
+<a href="https://bellybutton.webnode.page" target="_blank" style="
+  background: red;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-family: 'Mountains of Christmas', cursive;
+  font-size: 1.2em;
+  transition: 0.3s;
+">
+🎅 Visit bellybutton webnode
+</a>
+
+
+  <script>
+    // Countdown to Christmas
+    function updateCountdown() {
+      const now = new Date();
+      const year = now.getFullYear();
+      const christmas = new Date(year, 11, 25); // December 25
+      if (now > christmas) christmas.setFullYear(year + 1);
+
+      const diff = christmas - now;
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const mins = Math.floor((diff / (1000 * 60)) % 60);
+      const secs = Math.floor((diff / 1000) % 60);
+
+      document.getElementById("countdown").textContent =
+        `${days}d ${hours}h ${mins}m ${secs}s until Christmas 🎄`;
+    }
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+
+    // Snowflakes
+    function createSnowflake() {
+      const snowflake = document.createElement("div");
+      snowflake.classList.add("snowflake");
+      snowflake.textContent = "❄";
+      snowflake.style.left = Math.random() * 100 + "vw";
+      snowflake.style.animationDuration = (Math.random() * 3 + 2) + "s";
+      snowflake.style.fontSize = Math.random() * 20 + 10 + "px";
+      document.body.appendChild(snowflake);
+      setTimeout(() => snowflake.remove(), 5000);
+    }
+    setInterval(createSnowflake, 150);
+
+    // Fade-in animation
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    });
+    document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
+
+    // Video placeholder click
+    document.getElementById("videoPlaceholder").addEventListener("click", () => {
+      const videoFrame = document.createElement("iframe");
+      videoFrame.src = "https://santatracker.google.com/snowball.html";
+      videoFrame.width = "100%";
+      videoFrame.height = "500";
+      videoFrame.style.border = "none";
+      document.getElementById("videoPlaceholder").replaceWith(videoFrame);
+    });
+  </script>
+
+</body>
+</html>
