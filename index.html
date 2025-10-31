@@ -261,6 +261,14 @@
       videoFrame.style.border = "none";
       document.getElementById("videoPlaceholder").replaceWith(videoFrame);
     });
+     document.getElementById("videoPlaceholder").addEventListener("click", () => {
+      const videoFrame = document.createElement("iframe");
+      videoFrame.src = "https://www.youtube.com/watch?v=OuyTmdvUtQM";
+      videoFrame.width = "100%";
+      videoFrame.height = "500";
+      videoFrame.style.border = "none";
+      document.getElementById("videoPlaceholder").replaceWith(videoFrame);
+    });
   </script>
 
 </body>
